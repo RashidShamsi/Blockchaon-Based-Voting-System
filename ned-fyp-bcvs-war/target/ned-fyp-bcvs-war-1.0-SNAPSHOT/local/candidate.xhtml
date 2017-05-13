@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" ></meta>
+
+
+    <h:outputStylesheet name="./css/font-awesome.min.css"/> 
+    <h:outputStylesheet name="./css/bootstrap.min.css"/>
+    <h:outputStylesheet name="./css/jquery.fancybox.css"/>
+    <h:outputStylesheet name="./css/animate.css"/> 
+<!--    <h:outputStylesheet name="./css/enquirymain.css"/>-->
+    <h:outputStylesheet name="./css/media-queries.css"/>
+    <h:outputStylesheet name="./css/pricing.css"/>
+    <h:outputStylesheet name="./css/modal.css"/>
+
+    <h:outputScript name="./js/bootstrap-select.js"/>
+    <h:outputScript name="./js/modernizr-2.6.2.min.js"/>
+    <h:outputScript name="./js/bootstrap.js"/>
+
+   <title>E-Bait</title>
+    <meta name="description" content="E Bait - The Blockchain based Voting System"></meta>
+
+        <meta name="author" content="Rashid"></meta>
+<!-- Mobile Specific Meta -->
+            <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+            <!-- Google Font -->
+
+            <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'> </link>
+
+</h:head>
+
+<h:body id="body">
+
+  <!-- preloader -->
+<div id="preloader">
+  <img src="../resources/img/preloader.gif" alt="Preloader"></img>
+</div>
+<!-- end preloader -->
+
+    <!-- 
+    Fixed Navigation
+    ==================================== -->
+<header  class="navbar-fixed-top navbar">
+    <div class="navbar navbar-inverse">
+        <div class="container">
+
+                           <div class="sec-title text-center wow fadeInUp animated" data-wow-duration="700ms">
+                        <h2>Select Candidates to Vote</h2>
+<!--                        <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>-->
+                </div>
+            
+               <div class="sec-sub-title text-center wow fadeInRight animated" data-wow-duration="500ms">
+                        <p> Please Select candidates carefully </p>
+                </div>
+             <div class="sec-sub-title text-center wow fadeInRight animated" data-wow-duration="500ms">
+                        <p> <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div> </p>
+                </div>
+        <!--    <div class="sec-sub-title text-center wow fadeInRight animated" data-wow-duration="500ms">
+                <p>Please select the candidates carefully and then click VOTE</p>
+            </div>-->
+<!--            <div class="panel-heading" align="center" >
+                <button  type="submit" class="btn btn-success" id="">VOTE</button>
+            </div>-->
+        </div>         
+    </div>
+</header>
+
+    <!--
+    Home Slider
+    ==================================== -->
+
+ 
+<section id="team" class="team">
+  <div class="container" >
+        <div class="row">
+
+               <div >
+                        <h2>Select Candidates to Vote</h2>
+<!--                        <div class="devider"><i class="fa fa-heart-o fa-lg"></i></div>-->
+                </div>
+            
+               <div>
+                        <p>.</p>
+                </div>
+             
+
+              
+                
+                
+<!--                pricing start here-->
+
+    <br/><br/><br/>
+    
+    <!-- Plans -->
+    <section id="plans">
+        <div class="container">
+            <div class="row">
+<!--
+                 item 
+                <div class="col-md-4 text-center">
+                    <div class="panel panel-danger panel-pricing">
+                        <div class="panel-heading">
+                            <img src="../resources/img/preloader.gif" alt="Preloader"></img>
+                            <h3>Candidate Name Place Here</h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <p><strong>Party Name</strong></p>
+                        </div>
+                        <ul class="list-group text-center">
+                            <li class="list-group-item">For MNA</li>
+                            <li class="list-group-item">Constituency Name</li>
+                        </ul>
+                        <div class="panel-footer">
+                            <a class="btn btn-lg btn-block btn-danger" href="#">VOTE!</a>
+                        </div>
+                    </div>
+                </div>
+                 /item 
+                
+                 item 
+                <div class="col-md-4 text-center">
+                    <div class="panel panel-danger panel-pricing">
+                        <div class="panel-heading">
+                            <img src="../resources/img/preloader.gif" alt="Preloader"></img>
+                            <h3>Candidate Name Place Here</h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <p><strong>Party Name</strong></p>
+                        </div>
+                        <ul class="list-group text-center">
+                            <li class="list-group-item">For MNA</li>
+                            <li class="list-group-item">Constituency Name</li>
+                        </ul>
+                        <div class="panel-footer">
+                            <a class="btn btn-lg btn-block btn-danger" href="#">VOTE!</a>
+                        </div>
+                    </div>
+                </div>
+                 /item -->
+                <!-- item -->
+                <ui:repeat var="candidate" value="#{votingFrontEndBean.candidateList}">
+                    <div class="col-md-4 text-center">
+                        <div class="panel panel-warning panel-pricing">
+                            <div class="panel-heading">
+                                <img src="../resources/img/3.png" alt="Preloader" width="204" height="136"></img>
+                                <h3>#{candidate.firstName}</h3>
+                            </div>
+                            <div class="panel-body text-center">
+                                <p><strong></strong></p>
+                            </div>
+                            <ul class="list-group text-center">
+                                <li class="list-group-item">#{candidate.candidateType}</li>
+                                <li class="list-group-item">#{votingFrontEndBean.constituencyName}</li>
+                            </ul>
+                            <div class="panel-footer">
+                                <a data-toggle="modal" href="#myModal" class="btn btn-lg btn-block btn-danger">VOTE!</a>
+                            </div>
+                        </div>
+                    </div>
+                </ui:repeat>
+                <!-- /item -->             
+            </div>
+        </div>
+    </section>
+    <!-- /Plans -->
+
+<!--                pricing end here-->
+
+        <!--modal box start here-->
+        <div class="container">
+        <div class="row">
+        <div id="myModal" class="modal fade in" tabindex="-" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">Confirm Your Selection</h4>
+                        <p> Are you sure, you want to vote the selected candidate? </p>
+                    </div>
+                     <div class="modal-footer">
+                           <h:form>
+                               <center><button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                               <h:commandButton value="VOTE" action="#{votingFrontEndBean.castVote()}" class="btn btn-success" /></center> 
+                           </h:form>
+                     </div>
+                    <div class="modal-header"></div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dalog -->
+        </div><!-- /.modal -->
+        </div>
+        </div>
+        <!--modal box end here-->
+        
+        </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Essential jQuery Plugins
+================================================== -->
+
+<!-- Main jQuery -->
+    <script src="../resources/js/jquery-1.11.1.min.js"></script>
+<!-- Single Page Nav -->
+    <script src="../resources/js/jquery.singlePageNav.min.js"></script>
+<!-- Twitter Bootstrap -->
+    <script src="../resources/js/bootstrap.min.js"></script>
+<!-- jquery.fancybox.pack -->
+    <script src="../resources/js/jquery.fancybox.pack.js"></script>
+<!-- jquery.mixitup.min -->
+    <script src="../resources/js/jquery.mixitup.min.js"></script>
+<!-- jquery.parallax -->
+    <script src="../resources/js/jquery.parallax-1.1.3.js"></script>
+<!-- jquery.countTo -->
+    <script src="../resources/js/jquery-countTo.js"></script>
+<!-- jquery.appear -->
+    <script src="../resources/js/jquery.appear.js"></script>
+<!-- Contact form validation -->
+    <script src="../resources/js/jquery.form.js"></script>
+    <script src="../resources/js/jquery.validate.min.js"></script>
+<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>-->
+<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>-->
+<!-- Google Map -->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<!-- jquery easing -->
+    <script src="../resources/js/jquery.easing.min.js"></script>
+<!-- jquery easing -->
+    <script src="../resources/js/wow.min.js"></script>
+<script>
+  var wow = new WOW ({
+    boxClass:     'wow',      // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset:       120,          // distance to the element when triggering the animation (default is 0)
+    mobile:       false,       // trigger animations on mobile devices (default is true)
+    live:         true        // act on asynchronously loaded content (default is true)
+    }
+  );
+  wow.init();
+</script> 
+<!-- Custom Functions -->
+    <script src="../resources/js/custom.js"></script>
+
+<script type="text/javascript">
+  $(function(){
+    /* ========================================================================= */
+    /*  Contact Form
+    /* ========================================================================= */
+
+    $('#contact-form').validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
+        email: {
+          required: true,
+          email: true
+        },
+        message: {
+          required: true
+        }
+      },
+      messages: {
+        name: {
+          required: "come on, you have a name don't you?",
+          minlength: "your name must consist of at least 2 characters"
+        },
+        email: {
+          required: "no email, no message"
+        },
+        message: {
+          required: "um...yea, you have to write something to send this form.",
+          minlength: "thats all? really?"
+        }
+      },
+      submitHandler: function(form) {
+        $(form).ajaxSubmit({
+          type:"POST",
+          data: $(form).serialize(),
+          url:"process.php",
+          success: function() {
+            $('#contact-form :input').attr('disabled', 'disabled');
+            $('#contact-form').fadeTo( "slow", 0.15, function() {
+              $(this).find(':input').attr('disabled', 'disabled');
+              $(this).find('label').css('cursor','default');
+              $('#success').fadeIn();
+            });
+          },
+          error: function() {
+            $('#contact-form').fadeTo( "slow", 0.15, function() {
+              $('#error').fadeIn();
+            });
+          }
+        });
+      }
+    });
+  });
+</script>
+    
+    
+
+
+
+</h:body>
+
+</html>
+    

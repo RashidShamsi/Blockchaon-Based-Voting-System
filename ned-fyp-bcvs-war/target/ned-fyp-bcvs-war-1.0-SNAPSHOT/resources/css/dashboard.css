@@ -1,0 +1,18 @@
+body { padding-top:20px; }
+.panel-body .btn:not(.btn-block) { width:120px;margin-bottom:10px; }/* 
+    Document   : dashboard
+    Created on : Oct 23, 2016, 3:35:45 PM
+    Author     : Shamsi
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+

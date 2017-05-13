@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <h:head>
+    <!-- END HEAD -->
+    <!-- PAGE LEVEL STYLES -->
+    <h:outputStylesheet name="./css/layout2.css" />
+    <h:outputStylesheet name="./plugins/flot/examples/examples.css"/>
+    <h:outputStylesheet name="./plugins/timeline/timeline.css" />
+    <h:outputStylesheet name="./plugins/timeline/dashboard.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    
+    </h:head>
+
+    <!-- BEGIN BODY -->
+<!--<body class="padTop53 " >-->
+<h:body styleClass="padTop53">
+      <!-- PAGE LEVEL SCRIPTS -->
+     <h:outputScript name="./plugins/flot/jquery.flot.js"/>
+     <h:outputScript name="./plugins/flot/jquery.flot.resize.js"/>
+     <h:outputScript name="./plugins/flot/jquery.flot.time.js"/>
+     <h:outputScript name="./plugins/flot/jquery.flot.stack.js"/>
+     <h:outputScript name="./js/for_index.js"/>
+    <!-- END PAGE LEVEL SCRIPTS -->
+
+   
+
+   
+    <!-- MAIN WRAPPER -->
+    
+    <div id="wrap" >
+        
+
+        <!-- HEADER SECTION -->
+        <ui:include src="header.xhtml" />
+        <!-- END HEADER SECTION -->
+
+
+
+       
+
+
+
+        <!--PAGE CONTENT -->
+        <div  >
+<!--BLOCK SECTION -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" >
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-bookmark"></span> Quick Shortcuts</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-6 col-md-12">
+                          <a href="dataupload.xhtml" class="btn btn-danger btn-lg btn-block " role="button"><span class="glyphicon glyphicon-file"></span> <br/>Upload Data</a>
+                          <center><a href="voters.xhtml" class="btn btn-warning btn-lg" role="button"><span class="glyphicon glyphicon-bookmark"></span> <br/>Voters</a>
+                          <a href="candidates.xhtml" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-user"></span> <br/>Candidates</a>
+                          <a href="#" class="btn btn-warning btn-lg" role="button"><span class="glyphicon glyphicon-user"></span> <br/>Constituencies</a>
+                          <a href="#" class="btn btn-success btn-lg" role="button"><span class="glyphicon glyphicon-user"></span> <br/>Constituency-Types</a>
+                          <a href="#" class="btn btn-info btn-lg" role="button"><span class="glyphicon glyphicon-file"></span> <br/>Election Parties</a>
+                          <a href="#" class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-picture"></span> <br/>Election Party Symbols</a>
+                          </center>
+                        </div>
+                    </div>
+<!--                    <a href="http://www.jquery2dotnet.com/" class="btn btn-success btn-lg btn-block" role="button"><span class="glyphicon glyphicon-globe"></span> Website</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--END BLOCK SECTION -->
+        </div> <!--END PAGE CONTENT -->   
+    </div> <!--Wrapp class div end -->
+  
+
+    <!--END MAIN WRAPPER -->
+
+    <!-- FOOTER -->
+ <ui:include src="footer.xhtml" />
+   
+</h:body>
+
+    <!-- END BODY -->
+</html>

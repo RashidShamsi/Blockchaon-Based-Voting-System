@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>E-Bait</title>
+     
+         <meta charset="UTF-8" />
+    <title>E-Bait | Admin Login Page</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+     <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <!-- GLOBAL STYLES -->
+     <!-- PAGE LEVEL STYLES -->
+    <h:outputStylesheet name="./plugins/bootstrap/css/bootstrap.css" />
+    <h:outputStylesheet name="./css/loginn.css" />
+    <h:outputStylesheet name="./plugins/magic/magic.css" />
+    </h:head>
+    <h:body>
+       
+   <!-- PAGE CONTENT --> 
+    <div class="container">
+    <div class="text-center">
+        <img src="../resources/img/elogot.png" id="logoimg" alt=" E-Bayt" />
+    </div>
+    <div class="tab-content">
+        <div id="login" class="tab-pane active">
+            <form action="index.xhtml" class="form-signin">
+                <p class="text-muted text-center btn-block btn btn-primary btn-rect">
+                    Enter your username and password
+                </p>
+                <input type="text" placeholder="Username" class="form-control" />
+                <input type="password" placeholder="Password" class="form-control" />
+                <button class="btn text-muted text-center btn-danger" type="submit">Sign in</button>
+            </form>
+        </div>
+        <div id="forgot" class="tab-pane">
+            <form action="index.xhtml" class="form-signin">
+                <p class="text-muted text-center btn-block btn btn-primary btn-rect">Enter your valid e-mail</p>
+                <input type="email"  required="required" placeholder="Your E-mail"  class="form-control" />
+                <br />
+                <button class="btn text-muted text-center btn-success" type="submit">Recover Password</button>
+            </form>
+        </div>
+        <div id="signup" class="tab-pane">
+            <form action="index.xhtml" class="form-signin">
+                <p class="text-muted text-center btn-block btn btn-primary btn-rect">Please Fill Details To Register</p>
+                 <input type="text" placeholder="First Name" class="form-control" />
+                 <input type="text" placeholder="Last Name" class="form-control" />
+                <input type="text" placeholder="Username" class="form-control" />
+                <input type="email" placeholder="Your E-mail" class="form-control" />
+                <input type="password" placeholder="password" class="form-control" />
+                <input type="password" placeholder="Re type password" class="form-control" />
+                <button class="btn text-muted text-center btn-success" type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    <div class="text-center">
+        <ul class="list-inline">
+            <li><a class="text-muted" href="#login" data-toggle="tab">Login</a></li>
+            <li><a class="text-muted" href="#forgot" data-toggle="tab">Forgot Password</a></li>
+            <li><a class="text-muted" href="#signup" data-toggle="tab">Signup</a></li>
+        </ul>
+    </div>
+
+
+</div>
+
+	  <!--END PAGE CONTENT -->     
+	      
+      <!-- PAGE LEVEL SCRIPTS -->
+      <h:outputScript name="./plugins/jquery-2.0.3.min.js"/>
+      <h:outputScript name="./plugins/bootstrap/js/bootstrap.js"/>
+   <h:outputScript name="./js/login.js"/>
+      <!--END PAGE LEVEL SCRIPTS -->
+
+    </h:body>
+</html>
+

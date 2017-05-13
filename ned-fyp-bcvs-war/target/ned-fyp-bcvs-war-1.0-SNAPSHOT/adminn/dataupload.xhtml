@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <h:head>
+
+
+   <h:outputStylesheet name="./css/bootstrap-fileupload.min.css"/>
+   
+   </h:head>
+    
+    <!-- BEGIN BODY -->
+<!--<body class="padTop53 " >-->
+<h:body >
+
+   
+    <!-- MAIN WRAPPER -->
+    
+    <div id="wrap" >
+        
+
+        <!-- HEADER SECTION -->
+        <ui:include src="header.xhtml" />
+        <!-- END HEADER SECTION -->
+
+
+
+       
+
+
+
+        <!--PAGE CONTENT -->
+        
+         <div class="inner">
+                <div class="row">
+                    <div class="col-lg-12">
+
+
+                        <h2> FileUploads </h2>
+
+
+
+                    </div>
+                </div>
+
+               
+				
+                <div class="row">
+    <div class="c-lg-12">
+        <div class="box">
+            <header class="dark">
+                <div class="icons"><i class="icon-cloud-upload"></i></div>
+                <h5>File Upload</h5>
+            </header>
+            <div class="body">
+                <!--<form >-->
+
+<!--                    <form action="voteruploadservlet" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label class="control-label col-lg-4">Upload Voters File</label>
+                            <div class="col-lg-8">
+                                <div class="fileupload fileupload-new" data-provides="fileupload">
+                                    <div class="input-group">
+                                        <span class="btn btn-file btn-info">
+                                            <span class="fileupload-new">Select file</span>
+                                            <span class="fileupload-exists">Change</span>
+                                            <input type="file" id="js-voter-upload-submit"/>
+                                        </span> 
+                                        <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
+                                        <button type="submit" class="btn btn-success" id="js-voter-upload-submit">Upload file</button>
+                                        <div class="col-lg-3">
+                                            <i class="icon-file fileupload-exists"></i>
+                                            <span class="fileupload-preview"></span>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </form>-->
+          <h1>Configure Voter Data</h1>
+          <form action="voteruploadservlet" method="post" enctype="multipart/form-data" id="js-upload-form">
+            <div class="form-inline">
+              <div class="form-group">
+                <input type="file" name="Upload Voters" id="js-voter-upload-files" ></input>
+              </div>
+              <button type="submit" class="btn btn-sm btn-primary" id="js-voter-upload-submit">Upload Voter files</button>
+            </div>
+          </form>
+
+          <h1>Configure Candidate Data</h1>
+          <form action="candidatefileupload" method="post" enctype="multipart/form-data" id="js-upload-form">
+            <div class="form-inline">
+              <div class="form-group">
+                <input type="file" name="Upload Candidates" id="js-candidate-upload-files" ></input>
+              </div>
+              <button type="submit" class="btn btn-sm btn-primary" id="js-candidate-upload-submit">Upload Candidate files</button>
+            </div>
+          </form>
+          
+          
+          <h1>Configure Constituency Data</h1>
+          <form action="constituencyfileupload" method="post" enctype="multipart/form-data" id="js-upload-form">
+            <div class="form-inline">
+              <div class="form-group">
+                <input type="file" name="Upload Contituency " id="js-contituency-upload-files" ></input>
+              </div>
+              <button type="submit" class="btn btn-sm btn-primary" id="js-contituency-upload-submit">Upload Constituency Data</button>
+            </div>
+          </form>
+          
+          <h1>Configure Constituency Type Data</h1>
+          <form action="constituencytypefileupload" method="post" enctype="multipart/form-data" id="js-upload-form">
+            <div class="form-inline">
+              <div class="form-group">
+                <input type="file" name="Upload Contituency Types" id="js-contituency-type-upload-files" ></input>
+              </div>
+              <button type="submit" class="btn btn-sm btn-primary" id="js-contituency-type-upload-submit">Upload Constituency Type</button>
+            </div>
+          </form>
+
+          <h1>Configure Election Parties Data</h1>
+          <form action="electionpartyfileupload" method="post" enctype="multipart/form-data" id="js-upload-form">
+            <div class="form-inline">
+              <div class="form-group">
+                <input type="file" name="Upload Election Party Data" id="js-EParty-upload-files" ></input>
+              </div>
+              <button type="submit" class="btn btn-sm btn-primary" id="js-EParty-upload-submit">Upload Election Party Data</button>
+            </div>
+          </form>
+<!--
+<form action="candidatefileupload">
+                        <div class="form-group">
+                            <label class="control-label col-lg-4">Upload Candidates File</label>
+                            <div class="col-lg-8">
+                                <div class="fileupload fileupload-new" data-provides="fileupload">
+                                    <div class="input-group">
+                                        <span class="btn btn-file btn-info">
+                                            <span class="fileupload-new">Select file</span>
+                                            <span class="fileupload-exists">Change</span>
+                                            <input type="file" />
+                                        </span> 
+                                        <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
+                                        <button type="submit" class="btn btn-success" id="js-candidate-upload-submit">Upload file</button>
+                                        <div class="col-lg-3">
+                                            <i class="icon-file fileupload-exists"></i>
+                                            <span class="fileupload-preview"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>		
+
+                    <form action="constituencyfileupload">
+                        <div class="form-group">
+                            <label class="control-label col-lg-4">Upload Constituency File</label>
+                            <div class="col-lg-8">
+                                <div class="fileupload fileupload-new" data-provides="fileupload">
+                                    <div class="input-group">
+                                        <span class="btn btn-file btn-info">
+                                            <span class="fileupload-new">Select file</span>
+                                            <span class="fileupload-exists">Change</span>
+                                            <input type="file" />
+                                        </span> 
+                                        <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
+                                        <button type="submit" class="btn btn-success" id="js-cons-upload-submit">Upload file</button>
+                                        <div class="col-lg-3">
+                                            <i class="icon-file fileupload-exists"></i>
+                                            <span class="fileupload-preview"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>		
+		
+                    <form action="constituencytypefileupload">
+                        <div class="form-group">
+                            <label class="control-label col-lg-4">Upload Constituency type File</label>
+                            <div class="col-lg-8">
+                                <div class="fileupload fileupload-new" data-provides="fileupload">
+                                    <div class="input-group">
+                                        <span class="btn btn-file btn-info">
+                                            <span class="fileupload-new">Select file</span>
+                                            <span class="fileupload-exists">Change</span>
+                                            <input type="file" />
+                                        </span> 
+                                        <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
+                                        <button type="submit" class="btn btn-success" id="js-consType-upload-submit">Upload file</button>
+                                        <div class="col-lg-3">
+                                            <i class="icon-file fileupload-exists"></i>
+                                            <span class="fileupload-preview"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>		
+				
+                    <form action="Electionpartyfileupload">
+                        <div class="form-group">
+                            <label class="control-label col-lg-4">Upload Election Parties File</label>
+                            <div class="col-lg-8">
+                                <div class="fileupload fileupload-new" data-provides="fileupload">
+                                    <div class="input-group">
+                                        <span class="btn btn-file btn-info">
+                                            <span class="fileupload-new">Select file</span>
+                                            <span class="fileupload-exists">Change</span>
+                                            <input type="file" />
+                                        </span> 
+                                        <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
+                                        <button type="submit" class="btn btn-success" id="js-electionparties-upload-submit">Upload file</button>
+                                        <div class="col-lg-3">
+                                            <i class="icon-file fileupload-exists"></i>
+                                            <span class="fileupload-preview"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>		-->
+<!--                    
+                    <form action="Electionpartysymbolsfileupload">
+                        <div class="form-group">
+                            <label class="control-label col-lg-4">Upload Election Parties File</label>
+                            <div class="col-lg-8">
+                                <div class="fileupload fileupload-new" data-provides="fileupload">
+                                    <div class="input-group">
+                                        <span class="btn btn-file btn-info">
+                                            <span class="fileupload-new">Select file</span>
+                                            <span class="fileupload-exists">Change</span>
+                                            <input type="file" />
+                                        </span> 
+                                        <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>
+                                        <button type="submit" class="btn btn-success" id="js-electionparties-upload-submit">Upload file</button>
+                                        <div class="col-lg-3">
+                                            <i class="icon-file fileupload-exists"></i>
+                                            <span class="fileupload-preview"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>		
+						-->
+						
+
+                   
+                <!--</form>-->
+            </div>
+        
+    </div>
+
+
+
+            </div>
+
+
+
+
+        </div>
+       
+        
+        
+        
+        
+        
+        
+        <!--END PAGE CONTENT -->   
+         </div> <!--Wrapp class div end --></div>
+  
+
+    <!--END MAIN WRAPPER -->
+
+    <!-- FOOTER -->
+ <ui:include src="footer.xhtml" />
+ 
+ 
+ <!-- PAGE LEVEL SCRIPTS -->
+     <h:outputScript name="./plugins/jasny/js/bootstrap-fileupload.js"/>
+
+ <!-- END PAGE LEVEL SCRIPTS -->
+   
+</h:body>
+
+    <!-- END BODY -->
+</html>

@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+    <link rel='shortcut icon' href='../resources/img/favicon.ico' type='image/x-icon'></link>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" ></meta>
+
+
+    <h:outputStylesheet name="./css/font-awesome.min.css"/> 
+    <h:outputStylesheet name="./css/bootstrap.min.css"/>
+    <h:outputStylesheet name="./css/jquery.fancybox.css"/>
+    <h:outputStylesheet name="./css/animate.css"/> 
+    <h:outputStylesheet name="./css/enquirymain.css"/>
+     <h:outputStylesheet name="./css/searchmodal.css"/>
+    <h:outputStylesheet name="./css/media-queries.css"/>
+    <h:outputScript name="./js/modernizr-2.6.2.min.js"/>
+    <h:outputScript name="./js/bootstrap.js"/>
+
+    <title>E-Bayt - The Blockchain based Voting System</title>
+    <meta name="description" content="E Bayt - The Blockchain based Voting System"></meta>
+
+    <meta name="author" content="Rashid"></meta>
+            <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+            <!-- Google Font -->
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'> </link>
+
+</h:head>
+
+<h:body id="body">
+
+    <div id="preloader">
+            <img src="../resources/img/preloader.gif" alt="Preloader"></img>
+    </div>
+<!--<header id="navigation" class="navbar-fixed-top navbar">
+    <div class="container">
+        <div class="navbar-header">
+             responsive nav button 
+           
+            <a class="navbar-brand" href="#body">
+                <h1 id="logo"><img src="../resources/img/logo.png" alt="E-Bait"></img></h1>
+            </a>
+        </div>
+
+    </div>
+</header>-->
+
+<!--	Home Silder	-->
+<section id="slider">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+                    <!-- single slide -->
+                    <div class="item active" style="background-image: url(../resources/img/banne.jpg);height: 300px;">
+
+                            <div class="carousel-caption">
+                                    <h2 data-wow-duration="700ms" data-wow-delay="500ms" class="wow bounceInDown animated"><span class="color"> E-Bayt</span></h2>
+                                    <h3 data-wow-duration="1000ms" class="wow slideInLeft animated">The<span class="color"> Blockchain</span> Based Voting System.</h3>
+                                    <p data-wow-duration="1000ms" class="wow slideInRight animated"><strong>E-Bayt - The name of Trust</strong></p>
+                   
+                                    
+                    
+                            <form action="#{enquiryBean.voterDetails()}" method="post" class="wow slideInRight animated">
+                                <div class="input-field socia "> <div class="modal-body"><p>Enquire Your Vote!</p></div>
+                                    <center>  <h:inputText id="vId" class="form-control" value="#{enquiryBean.voterId}" required="true" /> 
+                                        </center>
+<!--                                       <button type="submit" id="submit" class="btn btn-success" data-toggle="modal" data-target="#ModalMessage">Enquire</button>-->
+                     <button type="submit" id="submit" class="btn btn-success" data-toggle="modal" data-target="#enquirymodal">Enquire</button>
+                                    </div>
+                            </form>
+                           <!--<h:commandButton value="submit" action="#{enquiryBean.voterDetails()}" />-->
+                        
+                 
+                    
+                            <form action="#" method="post" class="wow slideInRight animated form">
+                                <div  class="input-field "><div class="modal-body"><p>Track Your Vote</p></div>
+                                    <center><input type="text" class="form-control" placeholder="Paste Your Transaction Id"></input></center>
+<!--                                      <button class="btn btn-success" data-toggle="modal" data-target="#ModalMessage" >Track</button>-->
+                     
+                                    </div>
+                                
+                            </form>
+                          <button class="btn btn-success" data-toggle="modal" data-target="#trackmodal" >Track</button>
+                  
+                    
+                                     <a href="overallposition.xhtml" class=" social-links btn btn-success btn-lg btn-block " role="button">Show Voting Results</a>
+<!--                                     <button href="overallposition.xhtml" class="social-links btn btn-success btn-lg btn-block ">Show Results</button>-->
+                            <ul class="social-links text-center">
+                                            <li><a href=""><i class="fa fa-twitter fa-lg"></i></a></li>
+                                            <li><a href=""><i class="fa fa-facebook fa-lg"></i></a></li>
+                                            <li><a href=""><i class="fa fa-google-plus fa-lg"></i></a></li>
+                                            <li><a href=""><i class="fa fa-dribbble fa-lg"></i></a></li>
+                            </ul>
+                            </div>
+                        <!-- Modal -->
+<div class="modal fade" id="trackmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form id="FormMessage" class="form-horizontal">
+      <div class="modal-content">
+        <div class="modal-header btn-primary">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">X</span><span class="sr-only">Close</span></button>
+          <h4 class="text-center"  id="myModalLabel">Track Vote Result</h4>
+        </div>
+        <div class="modal-body">
+          <br />
+          <!-- Select Destinataire -->
+        </div>
+        <div class="modal-footer">
+         
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+                        <!-- Modal -->
+<div class="modal fade" id="enquirymodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form id="FormMessage" class="form-horizontal">
+      <div class="modal-content">
+        <div class="modal-header btn-primary">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">X</span><span class="sr-only">Close</span></button>
+          <h4 class="text-center"  id="myModalLabel">Enquiry Result</h4>
+        </div>
+        <div class="modal-body">
+          <br />
+          <!-- Select Destinataire -->
+          <table id="dataTables-example">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Contact Number</th>
+                        <th>Constituency</th>
+                        <th>Voter Hash</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ui:repeat var="voter" value="#{enquiryBean.voter}" >
+                        <tr>
+                            <td>#{voter.voterId}</td>
+                            <td>#{voter.firstName}</td>
+                            <td>#{voter.lastName}</td>
+                            <td>#{voter.contactNumber}</td>
+                            <td>#{voter.constituencyId}</td>
+                            <td>#{voter.voterhash}</td>
+                        </tr>
+                    </ui:repeat>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal-footer">
+         
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+                     </div>
+                    
+                    
+
+
+            </div>
+            <!-- End Wrapper for slides -->
+
+    </div>
+</section>
+		
+	<!-- Essential jQuery Plugins
+		================================================== -->
+		<!-- Main jQuery -->
+        <script src="../resources/js/jquery-1.11.1.min.js"></script>
+		<!-- Single Page Nav -->
+        <script src="../resources/js/jquery.singlePageNav.min.js"></script>
+		<!-- Twitter Bootstrap -->
+        <script src="../resources/js/bootstrap.min.js"></script>
+		<!-- jquery.fancybox.pack -->
+        <script src="../resources/js/jquery.fancybox.pack.js"></script>
+		<!-- jquery.mixitup.min -->
+        <script src="../resources/js/jquery.mixitup.min.js"></script>
+		<!-- jquery.parallax -->
+        <script src="../resources/js/jquery.parallax-1.1.3.js"></script>
+		<!-- jquery.countTo -->
+        <script src="../resources/js/jquery-countTo.js"></script>
+		<!-- jquery.appear -->
+        <script src="../resources/js/jquery.appear.js"></script>
+		<!-- Contact form validation -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+		<!-- Google Map -->
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<!-- jquery easing -->
+        <script src="../resources/js/jquery.easing.min.js"></script>
+		<!-- jquery easing -->
+        <script src="../resources/js/wow.min.js"></script>
+		<script>
+			var wow = new WOW ({
+				boxClass:     'wow',      // animated element css class (default is wow)
+				animateClass: 'animated', // animation css class (default is animated)
+				offset:       120,          // distance to the element when triggering the animation (default is 0)
+				mobile:       false,       // trigger animations on mobile devices (default is true)
+				live:         true        // act on asynchronously loaded content (default is true)
+			  }
+			);
+			wow.init();
+		</script> 
+		<!-- Custom Functions -->
+        <script src="../resources/js/custom.js"></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				/* ========================================================================= */
+				/*	Contact Form
+				/* ========================================================================= */
+				
+				$('#contact-form').validate({
+					rules: {
+						name: {
+							required: true,
+							minlength: 2
+						},
+						email: {
+							required: true,
+							email: true
+						},
+						message: {
+							required: true
+						}
+					},
+					messages: {
+						name: {
+							required: "come on, you have a name don't you?",
+							minlength: "your name must consist of at least 2 characters"
+						},
+						email: {
+							required: "no email, no message"
+						},
+						message: {
+							required: "um...yea, you have to write something to send this form.",
+							minlength: "thats all? really?"
+						}
+					},
+					submitHandler: function(form) {
+						$(form).ajaxSubmit({
+							type:"POST",
+							data: $(form).serialize(),
+							url:"process.php",
+							success: function() {
+								$('#contact-form :input').attr('disabled', 'disabled');
+								$('#contact-form').fadeTo( "slow", 0.15, function() {
+									$(this).find(':input').attr('disabled', 'disabled');
+									$(this).find('label').css('cursor','default');
+									$('#success').fadeIn();
+								});
+							},
+							error: function() {
+								$('#contact-form').fadeTo( "slow", 0.15, function() {
+									$('#error').fadeIn();
+								});
+							}
+						});
+					}
+				});
+			});
+		</script>
+    </h:body>
+
+</html>

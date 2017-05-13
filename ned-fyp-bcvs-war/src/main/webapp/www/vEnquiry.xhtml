@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Voter Enquiry</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <div>
+            <h:form>
+                <h:inputText id="vId" value="#{enquiryBean.voterId}" required="true" />
+                <h:commandButton value="submit" action="#{enquiryBean.voterDetails()}"/>
+            </h:form>
+            <table id="dataTables-example">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Contact Number</th>
+                        <th>Constituency</th>
+                        <th>Voter Hash</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ui:repeat var="voter" value="#{enquiryBean.voter}" >
+                        <tr>
+                            <td>#{voter.voterId}</td>
+                            <td>#{voter.firstName}</td>
+                            <td>#{voter.lastName}</td>
+                            <td>#{voter.contactNumber}</td>
+                            <td>#{voter.constituencyId}</td>
+                            <td>#{voter.voterhash}</td>
+                        </tr>
+                    </ui:repeat>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

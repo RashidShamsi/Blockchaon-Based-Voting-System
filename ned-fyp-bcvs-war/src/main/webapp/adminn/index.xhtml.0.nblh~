@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <meta charset="UTF-8" />
+    <title>E-Bait</title>
+     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        
+         <!--END FOOTER -->
+    <h:outputStylesheet name="./plugins/bootstrap/css/bootstrap.css" />
+    <h:outputStylesheet name="./css/nmain.css" />
+    <h:outputStylesheet name="./css/theme.css" />
+    <h:outputStylesheet name="./css/MoneAdmin.css" />
+    <h:outputStylesheet name="./css/customebutton.css"/>
+    <h:outputStylesheet name="./plugins/Font-Awesome/css/font-awesome.css" />
+    <!--END GLOBAL STYLES -->
+
+    <!-- PAGE LEVEL STYLES -->
+    <h:outputStylesheet name="./css/layout2.css" />
+    <h:outputStylesheet name="./plugins/flot/examples/examples.css"/>
+    <h:outputStylesheet name="./plugins/timeline/timeline.css" />
+     
+
+</h:head>
+
+    <!-- END HEAD -->
+
+    <!-- BEGIN BODY -->
+<!--<body class="padTop53 " >-->
+<h:body>
+
+   
+         <!-- GLOBAL SCRIPTS -->
+     <h:outputScript name="./plugins/jquery-2.0.3.min.js"/>
+     <h:outputScript name="./plugins/bootstrap/js/bootstrap.min.js"/>
+     <h:outputScript name="./plugins/modernizr-2.6.2-respond-1.1.0.min.js"/>
+    <!-- END GLOBAL SCRIPTS -->
+
+    <!-- PAGE LEVEL SCRIPTS -->
+     <h:outputScript name="./plugins/flot/jquery.flot.js"/>
+     <h:outputScript name="./plugins/flot/jquery.flot.resize.js"/>
+     <h:outputScript name="./plugins/flot/jquery.flot.time.js"/>
+     <h:outputScript name="./plugins/flot/jquery.flot.stack.js"/>
+     <h:outputScript name="./js/for_index.js"/>
+    <!-- END PAGE LEVEL SCRIPTS -->
+   
+    <!-- MAIN WRAPPER -->
+    <div id="wrap" >
+        
+
+        <!-- HEADER SECTION -->
+        <div id="top">
+
+            <nav class="navbar navbar-inverse navbar-fixed-top " style="padding-top: 10px;">
+                <a data-original-title="Show/Hide Menu" data-placement="bottom" data-tooltip="tooltip" class="accordion-toggle btn btn-primary btn-sm visible-xs" data-toggle="collapse" href="#menu" id="menu-toggle"><i class="icon-align-justify"></i></a>
+                <!-- LOGO SECTION -->
+                <header class="navbar-header">
+                <a href="index.xhtml" class="navbar-brand"><img src="../resources/img/lo.png" alt="E-Bait" /></a>
+                </header>
+
+                <!-- END LOGO SECTION -->
+
+
+                  <!--Menu SECTIONS -->
+                <ul class="nav navbar-top-links navbar-left">
+                    <li class="btn-custom"><a href="index.xhtml"><i class="fa fa-bullseye"></i> Dashboard</a></li>
+                    <li class="btn-custom"><a href="index.xhtml" ><i class="icon-table"></i> Dashboard</a> </li>
+                    <li class=""><a href="forms_fileupload.html" ><i class="icon-table"></i> Upload Data</a></li>
+                    <li><a href="tables.html"><i class="icon-table"></i> Voters </a></li>  
+                    <li><a href="tables.html"><i class="icon-table"></i> Candidates</a></li>
+                </ul>  <!--Menu SECTION End -->
+
+                    <!--ADMIN SETTINGS SECTIONS -->
+                <ul class="nav navbar-top-links navbar-right">
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user "></i> Rashid <i class="icon-chevron-down "></i></a>
+
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#"><i class="icon-user"></i> User Profile </a></li>
+                            <li><a href="#"><i class="icon-gear"></i> Settings </a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html"><i class="icon-signout"></i> Logout </a></li>
+                        </ul>
+                    </li>
+                </ul> <!--END ADMIN SETTINGS -->
+
+            </nav>
+
+        </div>
+        <!-- END HEADER SECTION -->
+
+
+
+       
+
+
+
+        <!--PAGE CONTENT -->
+        <div>
+                            <!--BLOCK SECTION -->
+            <div class="inner" style="min-height: 700px;">
+              
+                        <div style="text-align: center;">
+
+                            <div>
+                                    <h1> E-Bait Dashboard </h1>
+                            </div>
+                           
+                            <a class="quick-btn" href="#">
+                                <i class="icon-check icon-2x"></i>
+                                <span> Products</span>
+                                <span class="label label-danger">2</span>
+                            </a>
+
+                            <a class="quick-btn" href="#">
+                                <i class="icon-check icon-2x"></i>
+                                <span>Messages</span>
+                                <span class="label label-success">456</span>
+                            </a>
+                            <a class="quick-btn" href="#">
+                                <i class="icon-signal icon-2x"></i>
+                                <span>Profit</span>
+                                <span class="label label-warning">+25</span>
+                            </a>
+                            <a class="quick-btn" href="#">
+                                <i class="icon-external-link icon-2x"></i>
+                                <span>value</span>
+                                <span class="label btn-metis-2">3.14159265</span>
+                            </a>
+                            <a class="quick-btn" href="#">
+                                <i class="icon-lemon icon-2x"></i>
+                                <span>tasks</span>
+                                <span class="label btn-metis-4">107</span>
+                            </a>
+                            <a class="quick-btn" href="#">
+                                <i class="icon-bolt icon-2x"></i>
+                                <span>Tickets</span>
+                                <span class="label label-default">20</span>
+                            </a>
+                        </div>
+            </div>  <!--END BLOCK SECTION -->
+        </div> <!--END PAGE CONTENT -->   
+    </div> <!--Wrapp class div end -->
+
+    <!--END MAIN WRAPPER -->
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <p>&copy;  binarytheme &nbsp;2014 &nbsp;</p>
+    </div>
+   
+</h:body>
+
+    <!-- END BODY -->
+</html>

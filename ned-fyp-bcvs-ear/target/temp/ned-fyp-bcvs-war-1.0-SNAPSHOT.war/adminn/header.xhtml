@@ -1,0 +1,77 @@
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:head>
+    <meta charset="UTF-8" />
+    <title>E-Bait</title>
+     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        
+         <!--END FOOTER -->
+    <h:outputStylesheet name="./plugins/bootstrap/css/bootstrap.css" />
+    <h:outputStylesheet name="./css/main.css" />
+    <h:outputStylesheet name="./css/theme.css" />
+    <h:outputStylesheet name="./css/MoneAdmin.css" />
+    <h:outputStylesheet name="./plugins/Font-Awesome/css/font-awesome.css" />
+    
+    <!--END GLOBAL STYLES -->
+
+    
+    
+             <!-- GLOBAL SCRIPTS -->
+     <h:outputScript name="./plugins/jquery-2.0.3.min.js"/>
+     <h:outputScript name="./plugins/bootstrap/js/bootstrap.min.js"/>
+     <h:outputScript name="./plugins/modernizr-2.6.2-respond-1.1.0.min.js"/>
+    <!-- END GLOBAL SCRIPTS -->
+
+  
+     
+
+</h:head>
+  <!-- HEADER SECTION -->
+        <div id="top">
+
+            <nav class="navbar navbar-inverse navbar-fixed-top " style="padding-top: 10px;">
+                <a data-original-title="Show/Hide Menu" data-placement="bottom" data-tooltip="tooltip" class="accordion-toggle btn btn-primary btn-sm visible-xs" data-toggle="collapse" href="#menu" id="menu-toggle"><i class="icon-align-justify"></i></a>
+                <!-- LOGO SECTION -->
+                <header class="navbar-header">
+                <a href="index.xhtml" class="navbar-brand"><img src="../resources/img/elogot.png" alt="E-Bait" /></a>
+                </header>
+
+                <!-- END LOGO SECTION -->
+
+
+                  <!--Menu SECTIONS -->
+                <ul class="nav navbar-top-links navbar-left">
+                   <a href="index.xhtml" class="btn btn-primary btn-small" role="button">  Dashboard</a>
+                   <a href="dataupload.xhtml" class="btn btn-primary btn-small" role="button"> Upload Data </a>
+                   <a href="voters.xhtml" class="btn btn-primary btn-small" role="button">  Voters</a>
+                   <a href="candidates.xhtml" class="btn btn-primary btn-small" role="button">  Candidates</a>
+                   <a href="Constituencies.xhtml" class="btn btn-primary btn-small" role="button">  Constituencies</a>
+                   <a href="ConstituencyType.xhtml" class="btn btn-primary btn-small" role="button">  Constituency Type</a>
+                   <a href="Electionparty.xhtml" class="btn btn-primary btn-small" role="button">  Election Party</a>
+                   <a href="electionpartytype.xhtml" class="btn btn-primary btn-small" role="button">  Election Symbols</a>
+                </ul>  <!--Menu SECTION End -->
+
+                    <!--ADMIN SETTINGS SECTIONS -->
+                <ul class="nav navbar-top-links navbar-right">
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user "></i> Rashid <i class="icon-chevron-down "></i></a>
+
+                        <ul class="dropdown-menu dropdown-user">
+<!--                            <li><a href="#"><i class="icon-user"></i> User Profile </a></li>
+                            <li><a href="#"><i class="icon-gear"></i> Settings </a></li>-->
+                            <li class="divider"></li>
+                            <li><a href="login.xhtml"><i class="icon-signout"></i> Logout </a></li>
+                        </ul>
+                    </li>
+                </ul> <!--END ADMIN SETTINGS -->
+
+            </nav>
+
+        </div>
+        <!-- END HEADER SECTION -->
+
+</ui:composition>

@@ -1,0 +1,61 @@
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:head>
+    <meta charset="UTF-8" />
+    <title>E-Bait</title>
+     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        
+         <!--END FOOTER -->
+    <h:outputStylesheet name="./plugins/bootstrap/css/bootstrap.css" />
+    <h:outputStylesheet name="./css/main.css" />
+    <h:outputStylesheet name="./css/theme.css" />
+    <h:outputStylesheet name="./css/MoneAdmin.css" />
+    <h:outputStylesheet name="./plugins/Font-Awesome/css/font-awesome.css" />
+    
+    <!--END GLOBAL STYLES -->
+
+    
+    
+             <!-- GLOBAL SCRIPTS -->
+     <h:outputScript name="./plugins/jquery-2.0.3.min.js"/>
+     <h:outputScript name="./plugins/bootstrap/js/bootstrap.min.js"/>
+     <h:outputScript name="./plugins/modernizr-2.6.2-respond-1.1.0.min.js"/>
+    <!-- END GLOBAL SCRIPTS -->
+
+  
+     
+
+</h:head>
+  <!-- HEADER SECTION -->
+        <div id="top">
+
+            <nav class="navbar navbar-inverse navbar-fixed-top " style="padding-top: 10px;">
+                <a data-original-title="Show/Hide Menu" data-placement="bottom" data-tooltip="tooltip" class="accordion-toggle btn btn-primary btn-sm visible-xs" data-toggle="collapse" href="#menu" id="menu-toggle"><i class="icon-align-justify"></i></a>
+                <!-- LOGO SECTION -->
+                <header class="navbar-header">
+                <a href="enquiry.xhtml" class="navbar-brand"><img src="../resources/img/elogot.png" alt="E-Bayt" /></a>
+                </header>
+
+                <!-- END LOGO SECTION -->
+
+
+
+                <ul class="nav navbar-top-links navbar-left">
+                   <a href="enquiry.xhtml" class="btn btn-primary btn-small" role="button">  Home</a>
+                   <a href="overallposition.xhtml" class="btn btn-primary btn-small" role="button">  Overall Position</a>
+                   <a href="ConstituencyBasedPartyResults.xhtml" class="btn btn-primary btn-small" role="button">  Constituency Based Party Results</a>
+                   <a href="ConstituencyBasedCandidateResults.xhtml" class="btn btn-primary btn-small" role="button">  Constituency Based Candidate Results</a>
+                    
+               </ul> <!--END ADMIN SETTINGS -->
+
+            </nav>
+
+        </div>
+        <!-- END HEADER SECTION -->
+
+</ui:composition>
